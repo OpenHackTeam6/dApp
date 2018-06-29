@@ -31,7 +31,7 @@
 
 
         <div id="header">
-            <div id="logo">문서 발급2</div>
+            <div id="logo">문서 발급</div>
             <ul id="tabs" class='nav'>
               <li><a href="#i1" class="scrollNav-links scrollNav-active">기관 선택</a></li>
               <li><a href="#i2" class="scrollNav-links " >비밀번호 입력</a></li>
@@ -41,7 +41,7 @@
             </ul>
           </div>
 
-          <div id="container" class="scrollNavData">
+          <div id="container" class="scrollNavData">  
             <div id="i1" class="scrollNav-content">
               <div id="d1">
                 <h2>주민등록표등본 전송</h2>
@@ -52,23 +52,23 @@
                 </div>
                 
 
+              <form name="form" method="post" action="loading.php">
+
+              <select class="js-example-basic-multiple" name="documents[]" multiple="multiple" style="width:500px">
+              <option value="주민등록표등본">주민등록표등본</option>
+              <option value="가족관계증명서">가족관계증명서</option>
+              </select>
 
 
-              <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
-  <option value="AL">Alabama</option>
-  <option value="WY">Wyoming</option>
-</select>
 
-
-
-                <input type="text" name="member_name" size="50">
+               
                 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
               </div>
               <div id=rect>
                   <a>기관분류 </a>
               </div>
               <div>
-                  <form name="form" method="post" action="confirm.php">
+                  
                   <select name="test" onchange="changes(document.form.test.value)" size="15" style="width:200px">
                     
                     <option value="1">경찰청</option>
