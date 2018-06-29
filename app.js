@@ -20,5 +20,8 @@ app.get('/',function(req,res){
 });
 
 app.post("/action", function(req, res) {
-
+    var article = fs.readFileSync("./hello.txt");
+	lineArray = article.toString();
+	var secret = 'abcdefg';
+	var hash = crypto.createHmac('sha256', secret).update(lineArray).digest('hex');
 });
