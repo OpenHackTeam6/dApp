@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h2>이더리움 트랜잭션 전송 연습</h2>
-
-<form action="/action" method='post'>
-  <input type="password" name="psw">
-  <input type="submit" value="실행">
-</form> 
-
-</body>
+  <head>
+    <script type="text/javascript" src="./js/bignumber.min.js"></script>
+    <script type="text/javascript" src="./js/crypto-js.js"></script>
+    <script type="text/javascript" src="./js/utf8.js"></script>
+    <script type="text/javascript" src="./js/web3.min.js"></script>
+  </head>
+  <body>
+    <h2>이더리움 트랜잭션 전송 연습</h2>
+    <input type="password" id=psw>
+    <input type="submit" onclick="unlockAccount();" value="Submit">
+    <p id="account"></p>
+  </body>
 </html>
