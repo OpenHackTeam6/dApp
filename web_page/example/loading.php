@@ -93,7 +93,7 @@ if(isset($_SESSION[docu])){ // select_name will be replaced with your input file
 
   ?>
 
-        [ <?=$value?> ]
+        <b>[ <?=$value?> ]</b>
 
 <?php
 
@@ -106,7 +106,7 @@ if(isset($_SESSION[docu])){ // select_name will be replaced with your input file
 
 
               
-             를<?=$_SESSION[org]?>으로 아주 안전하게 보내는 중이에요.
+             를<b> <?=$_SESSION[org]?></b>으로 아주 안전하게 보내는 중이에요.
 
 
 
@@ -115,7 +115,6 @@ if(isset($_SESSION[docu])){ // select_name will be replaced with your input file
 
 
 
-              <h2>How To Create A Loader</h2>
 
               <div class="loader" align="center"></div>
                 
