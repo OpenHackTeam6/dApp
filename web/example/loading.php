@@ -38,8 +38,6 @@ session_start();
   animation: spin 2s linear infinite;
 }
 
-#container { width:300px; height:300px;  text-align:center; } 
-#block { width:50px; height:50px;  display:inline-block; }
 
 /* Safari */
 @-webkit-keyframes spin {
