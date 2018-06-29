@@ -88,6 +88,21 @@ body {
   text-align: center;
   color: #ffffff;
   }
+  #btn_next_active{
+    width: 184px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #bebebe;
+    font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #9b9b9b;
+  }
 
   #pwd{
     height: 45px;
@@ -99,3 +114,5 @@ body {
     color:red;
     font-size: 13px;
   }
+
+  
