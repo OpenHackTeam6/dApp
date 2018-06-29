@@ -1,13 +1,39 @@
 <!DOCTYPE html>
 <html>
+<head>
+<script type="text/javascript" src="./js/bignumber.min.js"></script>
+
+<script type="text/javascript" src="./js/crypto-js.js"></script>
+
+<script type="text/javascript" src="./js/utf8.js"></script>
+
+<script type="text/javascript" src="./js/web3.min.js"></script>
+<script>
+	var web3 = new Web3();
+	var provider = new web3.providers.HttpProvider("http://localhost:8545");
+
+	web3.setProvider(provider);
+	
+	function unlockAccount() {
+		var address = "0x4d742c10916d042b923ce800608da5208389dd7b";
+		var password = document.getElementById('psw').value;
+		web3.personal.unlockAccount(address, password, 3000, function(error, result){
+			if (!error)
+			{
+				alert("사용자 인증 성공");
+   	     		}
+        			else
+        			{
+				alert("사용자 인증 실패");
+        			}
+   		})
+	}
+</script>
+</head>
 <body>
-
 <h2>이더리움 트랜잭션 전송 연습</h2>
-
-<form action="/action" method='post'>
-  <input type="password" name="psw">
-  <input type="submit" value="실행">
-</form> 
-
+  <input type="password" id=psw>
+  <input type="submit" onclick="unlockAccount();" value="Submit">
+  <p id="account"></p>
 </body>
 </html>
