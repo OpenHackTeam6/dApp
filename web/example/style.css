@@ -2,7 +2,13 @@ body {
   font-family:'Open Sans'; 
   line-height:1.7em; 
   background-color:rgb(255, 255, 255);
-  color: black;}
+  color: black;
+  background-image:url('img_background.PNG');
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 #header{
     background-color: rgb(151, 146, 146);
     height: 30px;
