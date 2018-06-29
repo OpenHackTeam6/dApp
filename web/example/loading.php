@@ -14,8 +14,8 @@ session_start();
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta http-equiv="refresh" content="2;url=confirm.php" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>jQuery scroll-navigation Plugin Demo</title>
-        <link rel="stylesheet" href="style.css" />
+        <title>전송</title>
+        <link rel="stylesheet" href="style_all.css" />
         <style>
         #container { max-width:640px; margin:70px auto;  color:black;}
         </style>
@@ -38,6 +38,9 @@ session_start();
   animation: spin 2s linear infinite;
 }
 
+#container { width:300px; height:300px;  text-align:center; } 
+#block { width:50px; height:50px;  display:inline-block; }
+
 /* Safari */
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
@@ -52,70 +55,47 @@ session_start();
     </head>
     <body>
 
-
-   
-
-
-
         <div id="header">
-            <div id="logo">문서 발급</div>
-            <ul id="tabs" class='nav'>
-              <li><a href="#i1" class="scrollNav-links scrollNav-active">기관 선택</a></li>
-              <li><a href="#i2" class="scrollNav-links " >비밀번호 입력</a></li>
-              <li><a href="#i3" class="scrollNav-links ">전송</a></li>
-              <li><a href="#i4" class="scrollNav-links ">확인 및 알림</a></li>
-              <li><a href="#i5" class="scrollNav-links "> ༚  </a></li>
-            </ul>
-          </div>
+        <ul id="tabs" class='nav'>
+          <li><a href="#i1" >기관 선택</a></li>
+          <li><a href="#i2">비밀번호 입력</a></li>
+          <li><a href="#i3" id="navAactive">전송</a></li>
+          <li><a href="#i4">확인 및 알림</a></li>
+        </ul>
+    </div>
 
-          <div id="container" class="scrollNavData">  
-            <div id="i1" class="scrollNav-content">
-              <div id="d1">
+  <div class="contentsContainer">
+    <div class="contentsHeader">
 
-이영진님의
+<h2>서류 전송</h2>
 
-
+<p>이영진님의
 <?php
-
-
-
 if(isset($_SESSION[docu])){ // select_name will be replaced with your input filed name
   $getInput = $_SESSION[docu]; // select_name will be replaced with your input filed name
   $selectedOption = "";
-
   foreach ($getInput as $option => $value) {
-
     $selectedOption .= $value.','; // I am separating Values with a comma (,) so that I can extract data using explode()
-  
-
   ?>
-
         <b>[ <?=$value?> ]</b>
-
 <?php
-
-  }
-  
+  } 
 }
-
 ?>
 
+             를<b> <?=$_SESSION[org]?></b>으로 아주 안전하게 보내는 중이에요.</p>
+</div>
 
 
-              
-             를<b> <?=$_SESSION[org]?></b>으로 아주 안전하게 보내는 중이에요.
-
-
-
-
-
-
-
-
+<div id="container">
+<div id="block">
 
               <div class="loader" align="center"></div>
-                
 
+</div>
+</div>
+                
+</div>
       
     </body>
 </html>
