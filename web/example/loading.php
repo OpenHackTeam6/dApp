@@ -1,12 +1,18 @@
 <!doctype html>
 <html>
 
+<?php
+
+session_start();
+
+?>
 
 
 
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta http-equiv="refresh" content="2;url=confirm.php" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>jQuery scroll-navigation Plugin Demo</title>
         <link rel="stylesheet" href="style.css" />
@@ -14,7 +20,6 @@
         #container { max-width:640px; margin:70px auto;  color:black;}
         </style>
 
-        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
@@ -71,14 +76,6 @@
 
 
 <?php
-
-
-
-//variable for a table
-
-$data = $_POST[test2];
-$_SESSION[org] = $_POST[test2];
-$_SESSION[docu] = $_POST['documents'];
 
 
 
