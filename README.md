@@ -14,6 +14,25 @@
     sudo apt-get update
     sudo apt-get install ethereum
 
+### Operate Geth in Console
+
+    geth --networkid "YOUR_NETWORK_ID" --rpc --rpcaddr "localhost" --rpcport 8545 --rpccorsdomain "*"
+    --rpcapi "eth,web3,personal" --datadir "YOUR_DATA_DIRECTORY" console
+    
+### Add Peer in Your Private Network
+
+    admin.addPeer("enode://0790f4f2d9f6.....YOUR_ENODE......6063d3f@YOUR_IP_ADDRESS:30303")
+
+### Sign Your Own Transaction
+
+    eth.signTransaction({
+        from: "YOUR_ACCOUNT_IN_HEX",
+        gas: 400000,
+        gasPrice: 18000000000,
+        data: "YOUR_DATA_IN_HEX"
+        nonce: eth.getTransactionCount("YOUR_ACCOUNT_IN_HEX")+eth.pendingTransactions.length
+    })
+
 ### License
 
 ```
