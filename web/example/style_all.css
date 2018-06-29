@@ -155,3 +155,52 @@ ul{
   color: #ffffff;
   border: none;
 }
+
+
+#btn_next2{
+  width: 184px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  background-color: #bebebe;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: gray;
+  border: none;
+}
+
+table,td{
+border: 1px;
+
+}
+
+table{
+
+  width:60%;
+  height: 100px;
+  margin:auto;
+  text-align: center;
+}
+
+.password{
+  border-radius: 12px;
+  height:20px;
+}
+
+
+
+.snip1535{
+  width: 70px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  background-color: #ADD8E6;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+}
+
+
