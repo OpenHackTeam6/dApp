@@ -17,7 +17,6 @@ session_start();
         <link rel="stylesheet" href="style_all.css" />
         
 
-
         <style>
 
 #container { width:300px; height:300px;  text-align:center; } 
@@ -133,6 +132,8 @@ if(isset($_SESSION[docu])){ // select_name will be replaced with your input file
         <th align="center" valign="middle" style="height:30px;background-color:#FFFFFF;">접수완료</th>
        
     </tr>
+    
+  
 </tbody>
 
 <?php
@@ -143,13 +144,18 @@ if(isset($_SESSION[docu])){ // select_name will be replaced with your input file
 
 
 ?>
-
 </table>
+
+
+
+
  </div>
  </div>
 
-
-
+<div align=center>
+  <button class="btn_next" type="button" onclick="self.close()">종료</button>
+</div>
+  
     
     </body>
 </html>
