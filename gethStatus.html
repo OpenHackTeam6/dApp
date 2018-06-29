@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>모니터링 도구</title>
+<script type="text/javascript" src="./js/bignumber.min.js"></script>
+<script type="text/javascript" src="./js/crypto-js.js"></script>
+<script type="text/javascript" src="./js/utf8.js"></script>
+<script type="text/javascript" src="./js/web3.min.js"></script>
+</head>
+<body>
+	<br />
+	<input type="button" value="실행" style="font-size:16px" onclick="startMonitor();" />
+	<br><br>
+	<h2>진행중인 계약</h2>
+	<p id="pending"></p>
+	<br>
+	<h2>완료된 계약</h2>
+	<table id="list" border="1">
+		<tr>
+			<th>계약 시각</th>
+			<th>계약 번호</th>
+		</tr>
+	</table>
+</body>
+</html>
