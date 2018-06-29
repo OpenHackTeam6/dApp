@@ -25,3 +25,7 @@ app.post("/action", function(req, res) {
 	var secret = 'abcdefg';
 	var hash = crypto.createHmac('sha256', secret).update(lineArray).digest('hex');
 });
+
+app.listen(8080, function() {
+    console.log('Server running at ' + hostname + ":8080");
+});
