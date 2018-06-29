@@ -18,106 +18,47 @@
 </head>
 
 <body>
-  <div id="header">
 
-    <button onclick="popup()">
-      문서 발급</button>
-    <div id="logo">문서 발급</div>
-    <ul id="tabs" class='nav'>
-      <li>
-        <a href="#i1" class="scrollNav-links scrollNav-active">기관 선택</a>
-      </li>
-      <li>
-        <a href="#i2" class="scrollNav-links ">비밀번호 입력</a>
-      </li>
-      <li>
-        <a href="#i3" class="scrollNav-links ">전송</a>
-      </li>
-      <li>
-        <a href="#i4" class="scrollNav-links ">확인 및 알림</a>
-      </li>
-      <li>
-        <a href="#i5" class="scrollNav-links "> ༚  </a>
-      </li>
-    </ul>
-  </div>
 
-  <div id="container" class="scrollNavData">
-    <div id="i1" class="scrollNav-content">
-      <div id="d1">
-        <h2>주민등록표등본 전송</h2>
-        <button id="btn">+ 문서추가</button>
-        <div color=#4a4a4a>
-          <p>이영진님의 선택하신 문서를 공공기관으로 전송합니다.</p>
-          <p>어디로 전송할까요?</p>
-        </div>
-
-        <input type="text" name="member_name" size="50">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      </div>
-      <div id=rect>
-        <a>기관분류 </a>
-      </div>
-      <div>
-        <form name="form">
-          <select name="test" onchange="changes(document.form.test.value)" size="10">
-            <option value="">--선택하여주세요--</option>
-            <option value="1">1번입니다</option>
-            <option value="2">2번입니다</option>
-          </select>
-          <select name="test2" size="10">
-            <select name="test2" size="15" style="width:200px">
-            </select>
-        </form>
-      </div>
-
-      <!-- jQuery_336 -->
-      <ins class="adsbygoogle" style="display:inline-block;width:1px;height:1px" data-ad-client="ca-pub-2783044520727903" data-ad-slot="5649687997"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
-      <div align=center>
-        <button id="btn_prev">이전</button>
-        <button id="btn_next" onclick="location.href='password.html'">
-
-          <a class="scrollNav-links">다음</a>
+    <button onclick="popup()" 
+    style="left:66%; top:7%; 
+    position: absolute;background-color: transparent;
+    color:transparent; border-color: transparent; width:8%; height: 3%; ">
         </button>
-      </div>
+  
 
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="../scroll-navigation.js"></script>
+  <script>
+    $(document).ready(function () {
+      var s = new scrollNav();
+      s.init();
+    });
 
-    </div>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    <script src="../scroll-navigation.js"></script>
-    <script>
-      $(document).ready(function () {
-        var s = new scrollNav();
-        s.init();
-      });
-
-    </script>
-    <script>
-      function popup(){
+  </script>
+  <script>
+    function popup() {
       var popupX = (window.screen.width / 2) - (800 / 2);
       var popupY = (window.screen.height / 2) - (400 / 2);
-      window.open('index.html', '비밀번호 입력', 
-      'status=no, height=400, width=800, left=' + popupX + ', top=' + popupY + ', screenX=' + popupX + ', screenY= ' + popupY);
-      }
-    </script>
- 
-    <script type="text/javascript">
+      window.open('index.html', '비밀번호 입력',
+        'status=no, height=400, width=800, left=' + popupX + ', top=' + popupY + ', screenX=' + popupX + ', screenY= ' + popupY);
+    }
+  </script>
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-36251023-1']);
-      _gaq.push(['_setDomainName', 'jqueryscript.net']);
-      _gaq.push(['_trackPageview']);
+  <script type="text/javascript">
 
-      (function () {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
 
-    </script>
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 </body>
 
 </html>
