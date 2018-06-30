@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>모니터링 도구</title>
+<script type="text/javascript" src="./js/bignumber.min.js"></script>
+<script type="text/javascript" src="./js/crypto-js.js"></script>
+<script type="text/javascript" src="./js/utf8.js"></script>
+<script type="text/javascript" src="./js/web3.min.js"></script>
+<script>
+var web3 = new Web3();
+var provider = new web3.providers.HttpProvider("http://localhost:8545");
+web3.setProvider(provider);
+web3.eth.defaultAccount = web3.eth.accounts[0];
+var stop = false;
+function startMonitor() {
+	stop = false;
+	var startBlockNo = 1;
+	var table = document.getElementById('list');
+	var i = startBlockNo;
+	for (; i <= web3.eth.blockNumber; i++) {
+		var result = web3.eth.getBlock(i);
+		insertBlockRow(result, table, i);
+	}
+	setTimeout(function() {
+	watchBlock(table, i);
+	}, 10000);
+}
+
+function watchBlock(table, blockNumber) {
+	if (stop) {
+		return;
+	}
+	if (blockNumber == web3.eth.blockNumber) {
+		setTimeout(function() {
+		watchBlock(table, blockNumber);
+		}, 10000);
+	return;
+	}
+	var result = web3.eth.getBlock(blockNumber);
+	insertBlockRow(result, table, blockNumber);
+	setTimeout(function() {
+	watchBlock(table, ++blockNumber);
+	}, 10000);
+}
+
+function insertBlockRow(result, table) {
+	var row = table.insertRow();
+	if (result.transactions.length > 0) {
+		var td = row.insertCell(0);
+		td.innerHTML = new Date(parseInt(result.timestamp) * 1000).toString();
+		var td = row.insertCell(1);
+		td.innerHTML = result.transactions.join("<br>");
+	}
+}
+
+function insertTranRow(transactions, td) {
+	var allData = "";
+	for (var i = 0; i < transactions.length; i++) {
+		var data = web3.eth.getTransaction(transactions[i]);
+		allData += JSON.stringify(data);
+	}
+	td.innerHTML = "<input type='text' value='" + allData + "' /></td>";
+}
+
+function stopWatch() {
+	stop = true;
+}
+</script>
+</head>
+<body>
+	<br />
+	<input type="button" value="실행" style="font-size:16px" onclick="startMonitor();" />
+	<br><br>
+	<h2>진행중인 계약</h2>
+	<p id="pending"></p>
+	<br>
+	<h2>완료된 계약</h2>
+	<table id="list" border="1">
+		<tr>
+			<th>계약 시각</th>
+			<th>계약 번호</th>
+		</tr>
+	</table>
+</body>
+</html>

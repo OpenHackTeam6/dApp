@@ -1,0 +1,123 @@
+body { 
+  font-family:'Open Sans'; 
+  line-height:1.7em; 
+  background-color:rgb(255, 255, 255);
+  color: black;
+  background-image:url('img_background.PNG');
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#header{
+    background-color: rgb(151, 146, 146);
+    height: 30px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  #logo{
+    float: left;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  ul{
+    display: inline;
+  }
+  li{
+    display: inline-block;
+    padding: 0px 30px;
+  }
+  .scrollNav-active{
+    color: red !important;
+  }
+  a{
+    color: white;
+    text-decoration: none;
+  }
+  #container{
+    margin-top: 70px;
+    
+  }
+  #d1{
+    text-align : center;
+  }
+
+  #btn{
+    border-radius:10px;
+    width: 100px;
+  height: 45px;
+  font-family: AppleSDGothicNeo;
+  font-size: 12px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #bac79e;
+  background-color: white;
+  margin-right: 0px;
+  
+  }
+
+  #btn_prev{
+    width: 184px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #bebebe;
+  font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #9b9b9b;
+  }
+
+  #btn_next{
+    width: 184px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #bac79e;
+    font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  }
+  #btn_next_active{
+    width: 184px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #bebebe;
+    font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #9b9b9b;
+  }
+
+  #pwd{
+    height: 45px;
+    width: 450px;
+    margin-right: 0px;
+  }
+
+  #pw_red{
+    color:red;
+    font-size: 13px;
+  }
+

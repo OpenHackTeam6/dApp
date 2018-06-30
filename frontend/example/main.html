@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery scroll-navigation Plugin Demo</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #container {
+      max-width: 640px;
+      margin: 70px auto;
+      color: black;
+      background-color: black;
+    }
+  </style>
+</head>
+
+<body>
+
+
+    <button onclick="popup()" 
+    style="left:66%; top:7%; 
+    position: absolute;background-color: transparent;
+    color:transparent; border-color: transparent; width:8%; height: 3%; ">
+        </button>
+  
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script src="../scroll-navigation.js"></script>
+  <script>
+    $(document).ready(function () {
+      var s = new scrollNav();
+      s.init();
+    });
+
+  </script>
+  <script>
+    function popup() {
+      var popupX = (window.screen.width / 2) - (800 / 2);
+      var popupY = (window.screen.height / 2) - (400 / 2);
+      window.open('index.html', '비밀번호 입력',
+        'status=no, height=400, width=800, left=' + popupX + ', top=' + popupY + ', screenX=' + popupX + ', screenY= ' + popupY);
+    }
+  </script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+</body>
+
+</html>
